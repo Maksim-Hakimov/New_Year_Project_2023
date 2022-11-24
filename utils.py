@@ -1,10 +1,12 @@
-from datetime import datetime
+import datetime
 
 
 def advent():
-    date_now = datetime.now()
-    date_stop = datetime(2023, 1, 1)
-    days_left = date_stop - date_now
-    return f'До Нового Года осталось {days_left.days} дней!'
+    now = datetime.datetime.today()
+    new_year = datetime.datetime(2023, 1, 1)
+    d = new_year - now
 
+    mm, ss = divmod(d.seconds, 60)
+    hh, mm = divmod(mm, 60)
 
+    return f'До нового года: {d.days} дней {hh} часа {mm} мин {ss} сек.'
