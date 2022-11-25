@@ -1,6 +1,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
+@font-face{
+    font-family: 'comfortaa';
+    url("https://fonts-online.ru/fonts/comfortaa") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%
@@ -210,6 +218,26 @@ textarea {
 	font-family: 'Arial', serif
 }
 
+.xxx {
+	position: relative;
+	left: 350px;
+	top: 200px;
+}
+
+.text {
+    font-family: "comfortaa";
+	position: relative;
+	color: red;
+	left: 880px;
+	top: 50px;
+}
+
+.tree {
+	position: relative;
+	left: 400px;
+	bottom: 10px;
+}
+
 .container {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -259,14 +287,6 @@ textarea {
   margin-top:0;
   color: black;
   text-transform: uppercase;
-}
-
-.header__bookmark-btn {
-	position: absolute;
-	right: 0;
-	top: 34px;
-	text-decoration: none;
-	display: block
 }
 
 .header__bookmark-icon {
@@ -331,27 +351,8 @@ textarea {
 	padding-right: 14px
 }
 
-.item__username {
-	font-weight: bold;
-	color: #000;
-	padding-bottom: 10px
-}
-
-.item__post-link {
-	display: block;
-	line-height: 0;
-	margin-top: 0px;
-	margin-bottom: 27px
-}
 
 .item__descr {
-    text-align: center;
-    color: #008000;
-    margin-top: 0px;
-	margin-bottom: 2px
-}
-
-.item__descr1 {
     text-align: center;
     color: #008000;
     margin-top: 0px;
@@ -522,4 +523,5 @@ textarea {
 }
 
 
-/*# sourceMappingURL=styles.min.css.map */
+
+

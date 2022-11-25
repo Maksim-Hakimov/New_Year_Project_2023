@@ -9,8 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def advent_time():
     time = advent()
-    klaus = f'Йо - хо - хо :-)'
-    return render_template('index.html', time=time, klaus=klaus)
+    return render_template('index.html', time=time)
 
 
 if __name__ == '__main__':

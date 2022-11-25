@@ -9,4 +9,6 @@ def advent():
     mm, ss = divmod(d.seconds, 60)
     hh, mm = divmod(mm, 60)
 
-    return f'До нового года: {d.days} дней {hh} часа {mm} мин {ss} сек.'
+    time = f'До нового года: {d.days} дней {hh} часа {mm} мин {ss} сек.'
+
+    return time
