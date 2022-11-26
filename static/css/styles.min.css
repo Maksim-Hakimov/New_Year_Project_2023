@@ -7,21 +7,31 @@
 }
 
 .xxx {
-	position: relative;
-	left: 350px;
-	top: 200px;
+	position: absolute;
+	right: 12%;
+	top: 23%;
 }
 
 .text {
     font-family: "comfortaa";
-	position: relative;
+	position: absolute;
 	color: red;
-	left: 880px;
-	top: 50px;
+	right: 13%;
+	top: 13%
 }
 
 .tree {
-	position: relative;
-	left: 400px;
-	bottom: 10px;
+	position: absolute;
+	left: 28%;
+	bottom: 10%;
 }
+
+.marquee{
+    position: absolute;
+    left: 23%;
+	bottom: 3%;
+    font-family: comfortaa;
+    text-transform: lowercase
+    white-space: normal
+}
+

@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+  <link rel="icon" href="data:;base64,=">
   <meta charset="UTF-8">
   <title>СКОРО НОВЫЙ ГОД</title>
   <link href="/static/css/styles.min.css" rel="stylesheet">
@@ -20,27 +21,49 @@
 
 <body>
 
-  <a href="/" class="xxx">
-    <script src="//megatimer.ru/get/d1fd69e91adfacb56e4fac711559d37e.js"></script>
-  </a>
+  <div>
+    <a href="/" class="xxx">
+      <script src="//megatimer.ru/get/d1fd69e91adfacb56e4fac711559d37e.js"></script>
+    </a>
+  </div>
 
-  <a href="/" class="text">
-    <h2> до нового года осталось </h2>
-  </a>
+  <div>
+    <a href="/" class="text">
+     <h1> до нового года осталось </h1>
+    </a>
+  </div>
 
-  <a href="/" class="tree">
-    <img src="/static/img/1.png" alt="" width="500" class="item__post-img">
-  </a>
+  <div>
+    <a href="/" class="tree">
+      <img src="/static/img/1.png" alt="" width="500" class="item__post-img">
+    </a>
+  </div>
 
-  <script src='/static/js/snowfall.js'></script>
-  <script src="/static/js/snowfall.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-          $(document).snowfall({image :"static/img/snowfall/img/snow4.png", minSize: 10, maxSize:20});
-      });
-  </script>
+  <div>
+    <script src='/static/js/snowfall.js'></script>
+    <script src="/static/js/snowfall.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).snowfall({image :"static/img/snowfall/img/snow4.png", minSize: 10, maxSize:20});
+        });
+    </script>
+  </div>
 
-          <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop > </audio>
+  <div>
+    <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop > </audio>
+  </div>
+
+  <div class="marquee">
+    <marquee scrollamount="15"
+             loop: -1
+             width="600"
+             style="color: #1E8449; font-size: 30px;
+                    line-height: 150%;
+                    text-shadow: #000000 0px 1px 1px;"
+             >Здесь будет новогоднее поздравление
+    </marquee>
+  </div>
+
 
 </body>
 
