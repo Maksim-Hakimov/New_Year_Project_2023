@@ -34,6 +34,26 @@
   </div>
 
   <div>
+    {% for i in texts %}
+
+    <a href="/">
+     <h3> {{ i.get('text') }} <br>
+          ({{ i.get('user') }}) </h3>
+    </a>
+    {% endfor %}
+
+  </div>
+
+
+  <div>
+    <form action="/new_congratulation" method="post">
+        <input type="text" name="user_name">
+        <input type="text" name="congratulation">
+        <input type="submit">
+    </form>
+  </div>
+
+  <div>
     <a href="/" class="tree">
       <img src="/static/img/1.png" alt="" width="500" class="item__post-img">
     </a>
@@ -60,7 +80,7 @@
              style="color: #1E8449; font-size: 30px;
                     line-height: 150%;
                     text-shadow: #000000 0px 1px 1px;"
-             >Здесь будет новогоднее поздравление
+             >{{ text }}
     </marquee>
   </div>
 

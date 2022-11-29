@@ -1,14 +1,22 @@
-import datetime
+import json
 
 
-def advent():
-    now = datetime.datetime.today()
-    new_year = datetime.datetime(2023, 1, 1)
-    d = new_year - now
+def load_json():
+    with open('data/123.json', 'r', encoding='UTF-8') as name_json:
+        return json.load(name_json)
 
-    mm, ss = divmod(d.seconds, 60)
-    hh, mm = divmod(mm, 60)
 
-    time = f'До нового года: {d.days} дней {hh} часа {mm} мин {ss} сек.'
+def create_dict(user, text):
+    dict_one = load_json()
 
-    return time
+    all_dict = {'user': user, 'text': text}
+    dict_one.append(all_dict)
+
+    wright_json(dict_one)
+    return
+
+
+def wright_json(dict_one):
+    with open('data/123.json', 'w', encoding='UTF-8') as name_json:
+        json.dump(dict_one, name_json, ensure_ascii=False)
+    return
