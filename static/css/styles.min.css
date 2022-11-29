@@ -2,14 +2,13 @@
     font-family: 'comfortaa';
     url("https://fonts-online.ru/fonts/comfortaa") format('truetype');
     font-weight: normal;
-    font-style: normal;
-
+    font-style: normal
 }
 
-.xxx {
+.counter {
 	position: absolute;
 	right: 12%;
-	top: 23%;
+	top: 23%
 }
 
 .text {
@@ -23,7 +22,13 @@
 .tree {
 	position: absolute;
 	left: 28%;
-	bottom: 10%;
+	bottom: 10%
+}
+
+.klaus {
+	position: absolute;
+	right: 20%;
+	top: 40.5%;
 }
 
 .marquee{
@@ -35,3 +40,26 @@
     white-space: normal
 }
 
+.input_text{
+    position: absolute;
+	right: 12%;
+	top: 57%;
+    width:408px;
+    height:100px
+}
+
+.input_user{
+    position: absolute;
+	right: 23%;
+	top: 75%;
+    width:250px;
+    height:45px
+}
+.button{
+    position: absolute;
+	right: 12%;
+	top: 75%;
+    width:150px;
+    height:50px
+}
+}

@@ -22,7 +22,7 @@
 <body>
 
   <div>
-    <a href="/" class="xxx">
+    <a href="/" class="counter">
       <script src="//megatimer.ru/get/d1fd69e91adfacb56e4fac711559d37e.js"></script>
     </a>
   </div>
@@ -47,11 +47,20 @@
 
   <div>
     <form action="/new_congratulation" method="post">
-        <input type="text" name="user_name">
-        <input type="text" name="congratulation">
-        <input type="submit">
+        <input type="text" placeholder="От кого поздравления?"
+               name="user_name" class="input_user">
+        <input type="text" placeholder="Введите здесь новогоднее пожелание"
+               name="congratulation" class="input_text">
+        <input type="image" src="/static/img/button.png" class="button">
     </form>
   </div>
+
+  <div>
+    <a href="/" class="klaus">
+      <img src="/static/img/klaus.png" alt="" width="200">
+    </a>
+  </div>
+
 
   <div>
     <a href="/" class="tree">
