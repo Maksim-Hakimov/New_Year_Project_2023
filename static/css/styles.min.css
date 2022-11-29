@@ -22,7 +22,7 @@
 .tree {
 	position: absolute;
 	left: 28%;
-	bottom: 10%
+	bottom: 12%
 }
 
 .klaus {
@@ -40,12 +40,20 @@
     white-space: normal
 }
 
+.gif{
+    position: absolute;
+    left: -10%;
+	bottom: 2%;
+
+}
+
 .input_text{
     position: absolute;
 	right: 12%;
 	top: 57%;
     width:408px;
-    height:100px
+    height:100px;
+    font-family: comfortaa
 }
 
 .input_user{
@@ -53,7 +61,8 @@
 	right: 23%;
 	top: 75%;
     width:250px;
-    height:45px
+    height:45px;
+    font-family: comfortaa;
 }
 .button{
     position: absolute;

@@ -83,13 +83,15 @@
   </div>
 
   <div class="marquee">
-    <marquee scrollamount="15"
+    <marquee direction="left"
+             scrollamount="15"
              loop: -1
              width="600"
              style="color: #1E8449; font-size: 30px;
-                    line-height: 150%;
+                    line-height: 200%;
                     text-shadow: #000000 0px 1px 1px;"
-             >{{ text }}
+
+             ><img src="/static/img/run.gif" width="50"  class="gif"/>   {{ text }}
     </marquee>
   </div>
 
