@@ -1,98 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>СКОРО НОВЫЙ ГОД</title>
+    <link href="/static/css/styles.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <link rel="icon" href="data:;base64,=">
-  <meta charset="UTF-8">
-  <title>СКОРО НОВЫЙ ГОД</title>
-  <link href="/static/css/styles.min.css" rel="stylesheet">
+  <body class="body">
+    <main class="wrapper">
+      <div class="greetings">
+        {% for i in texts %}
+        <p class="greetings__text">
+          {{ i.get('text') }} <br />
+          ({{ i.get('user') }})
+        </p>
+        {% endfor %}
+      </div>
 
-  <style>
-    body {
-          background: url(static/img/fon/NY_fon.jpeg);
-          background-size: cover;
-          background-repeat: no-repeat;
-    }
-  </style>
+      <div class="bg-image"></div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+      <div class="timer">
+        <h1 class="timer__text">до нового года осталось</h1>
+        <script src="//megatimer.ru/get/d1fd69e91adfacb56e4fac711559d37e.js"></script>
+        <!-- <script src="//megatimer.ru/get/5656745217f06366a125d5d1f5fbc71d.js"></script>282 -->
+      </div>
 
-</head>
+      <form class="form" action="/new_congratulation" method="post">
+        <img
+          class="form__image"
+          src="/static/img/klaus.png"
+          alt="Santa with Deer"
+        />
+        <textarea
+          class="form__input_text"
+          placeholder="Введите новогоднее пожелание!"
+          name="congratulation"
+        ></textarea>
+        <input
+          class="form__input_user"
+          type="text"
+          placeholder="От кого поздравления?"
+          name="user_name"
+        />
+        <input class="form__button" type="image" src="/static/img/button.png" />
+      </form>
 
-<body>
+      <marquee class="marquee" direction="left" scrollamount="15" loop="-1">
+        <div class="marquee__content">
+          <img class="marquee__img" src="/static/img/run.gif" />
+          <span>{{ text }}</span>
+        </div>
+      </marquee>
+    </main>
 
-  <div>
-    <a href="/" class="counter">
-      <script src="//megatimer.ru/get/d1fd69e91adfacb56e4fac711559d37e.js"></script>
-    </a>
-  </div>
+    <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop></audio>
 
-  <div>
-    <a href="/" class="text">
-     <h1> до нового года осталось </h1>
-    </a>
-  </div>
-
-<!--  <div>-->
-<!--    {% for i in texts %}-->
-<!--    <a href="/">-->
-<!--     <h3> {{ i.get('text') }} <br>-->
-<!--          ({{ i.get('user') }}) </h3>-->
-<!--    </a>-->
-<!--    {% endfor %}-->
-<!--  </div>-->
-
-  <div>
-    <form action="/new_congratulation" method="post">
-        <input type="text" placeholder="От кого поздравления?"
-               name="user_name" class="input_user">
-        <input type="text" placeholder="Введите здесь новогоднее пожелание"
-               name="congratulation" class="input_text">
-        <input type="image" src="/static/img/button.png" class="button">
-    </form>
-  </div>
-
-  <div>
-    <a href="/" class="klaus">
-      <img src="/static/img/klaus.png" alt="" width="200">
-    </a>
-  </div>
-
-
-  <div>
-    <a href="/" class="tree">
-      <img src="/static/img/1.png" alt="" width="500" class="item__post-img">
-    </a>
-  </div>
-
-  <div>
-    <script src='/static/js/snowfall.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/static/js/snowfall.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(document).snowfall({image :"static/img/snowfall/img/snow4.png", minSize: 10, maxSize:20});
+    <script>
+      $(document).ready(function () {
+        $(document).snowfall({
+          image: 'static/img/snowfall/img/snow4.png',
+          minSize: 10,
+          maxSize: 20,
         });
+      });
     </script>
-  </div>
-
-  <div>
-    <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop > </audio>
-  </div>
-
-  <div class="marquee">
-    <marquee direction="left"
-             scrollamount="15"
-             loop: -1
-             width="600"
-             style="color: #1E8449; font-size: 30px;
-                    line-height: 200%;
-                    text-shadow: #000000 0px 1px 1px;"
-
-             ><img src="/static/img/run.gif" width="50"  class="gif"/>   {{ text }}
-    </marquee>
-  </div>
-
-
-</body>
-
+  </body>
 </html>

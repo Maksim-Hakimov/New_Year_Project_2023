@@ -4,6 +4,7 @@ from utils import create_dict, load_json
 template_folder = 'templates'
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
 # Главна страница сайта
