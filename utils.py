@@ -15,7 +15,9 @@ def create_dict(user, text):
     """
     dict_one = load_json()
 
-    all_dict = {'user': user, 'text': text}
+    len_dict = len(dict_one) + 1
+
+    all_dict = {'pk': len_dict, 'user': user, 'text': text}
     dict_one.append(all_dict)
 
     wright_json(dict_one)

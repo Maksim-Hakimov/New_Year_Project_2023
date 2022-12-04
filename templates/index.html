@@ -13,7 +13,7 @@
       <div class="greetings">
         {% for i in texts %}
         <p class="greetings__text">
-          {{ i.get('text') }} <br />
+          {{i.get('pk')}}. {{ i.get('text') }} <br />
           ({{ i.get('user') }})
         </p>
         {% endfor %}
@@ -45,7 +45,7 @@
         />
         <textarea
           class="form__input_text"
-          placeholder="Введите новогоднее пожелание!"
+          placeholder="Оставьте свое новогоднее поздравление под елкой!"
           name="congratulation"
         ></textarea>
         <input
@@ -69,7 +69,9 @@
       </marquee>
     </main>
 
-    <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop></audio>
+    <audio src="/static/audio/Let_It_Snow.mp3" autoplay loop>
+      <source src="/static/audio/Let_It_Snow.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/static/js/snowfall.js"></script>

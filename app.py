@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from utils import create_dict, load_json
+import random
 
 template_folder = 'templates'
 
@@ -16,13 +17,13 @@ def index():
     text = load_json()[-1].get('text')
     wish_list = load_json()
 
-    if len(wish_list) <= 10:
+    if len(wish_list) <= 9:
         texts = wish_list
     else:
-        # печатаю последние 10 сообщений из списка словарей в переменную
-        texts = wish_list[:-10: -1]
+        # печатаю случайные 9 сообщений из списка словарей в переменную
+        texts = random.sample(wish_list, 9)
 
-        # Возвращаю путь к файлу html и назначаю переменные, которые буду использовать в html
+    # Возвращаю путь к файлу html и назначаю переменные, которые буду использовать в html
     return render_template('index.html', text=text, texts=texts)
 
 
