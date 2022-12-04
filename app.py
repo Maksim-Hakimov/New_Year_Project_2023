@@ -17,11 +17,11 @@ def index():
     text = load_json()[-1].get('text')
     wish_list = load_json()
 
-    if len(wish_list) <= 9:
+    if len(wish_list) <= 7:
         texts = wish_list
     else:
         # печатаю случайные 9 сообщений из списка словарей в переменную
-        texts = random.sample(wish_list, 9)
+        texts = random.sample(wish_list, 7)
 
     # Возвращаю путь к файлу html и назначаю переменные, которые буду использовать в html
     return render_template('index.html', text=text, texts=texts)
